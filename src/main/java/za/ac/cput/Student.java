@@ -1,17 +1,20 @@
 package za.ac.cput;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+public abstract class Student {
+    protected String studentId;
+    protected String name;
+    protected String email;
+    protected String department;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+    public abstract double calculateTuition();
+    public abstract String getStudentType();
+
+    public void displayDetails() {
+        System.out.println("\nStudent Details");
+        System.out.println("Type: " + getStudentType());
+        System.out.println("ID: " + studentId);
+        System.out.println("Name: " + name);
+        System.out.println("Email: " + email);
+        System.out.println("Department: " + department);
     }
 }
