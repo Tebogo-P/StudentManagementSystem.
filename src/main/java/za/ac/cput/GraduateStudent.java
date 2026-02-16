@@ -4,20 +4,20 @@ public class GraduateStudent extends Student {
 
     protected boolean researchAssistant;
     protected double stipend;
-    private static final double BASE_TUITION = 50000.00;
+    private static final double tuition = 60000.00;
 
-    private GraduateStudent(Builder builder) {
-        this.studentId = builder.studentId;
-        this.name = builder.name;
-        this.email = builder.email;
-        this.department = builder.department;
-        this.researchAssistant = builder.researchAssistant;
-        this.stipend = builder.stipend;
+    private GraduateStudent(createStudent student) {
+        this.studentId = student.studentId;
+        this.name = student.name;
+        this.email = student.email;
+        this.department = student.department;
+        this.researchAssistant = student.researchAssistant;
+        this.stipend = student.stipend;
     }
 
     @Override
     public double calculateTuition() {
-        double total = BASE_TUITION - stipend;
+        double total = tuition - stipend;
         return Math.max(total, 0);
     }
 
@@ -28,13 +28,13 @@ public class GraduateStudent extends Student {
 
     @Override
     public void displayDetails() {
-        super.displayDetails(); // Calls the parent method
+        super.displayDetails();
         System.out.println("Research Assistant: " + (researchAssistant ? "Yes" : "No"));
         System.out.println("Stipend: R" + stipend);
         System.out.println("Total Tuition Due: R" + calculateTuition());
     }
 
-    public static class Builder {
+    public static class createStudent {
         private String studentId;
         private String name;
         private String email;
@@ -42,32 +42,32 @@ public class GraduateStudent extends Student {
         private boolean researchAssistant;
         private double stipend;
 
-        public Builder setStudentId(String studentId) {
+        public createStudent setStudentId(String studentId) {
             this.studentId = studentId;
             return this;
         }
 
-        public Builder setName(String name) {
+        public createStudent setName(String name) {
             this.name = name;
             return this;
         }
 
-        public Builder setEmail(String email) {
+        public createStudent setEmail(String email) {
             this.email = email;
             return this;
         }
 
-        public Builder setDepartment(String department) {
+        public createStudent setDepartment(String department) {
             this.department = department;
             return this;
         }
 
-        public Builder setResearchAssistant(boolean researchAssistant) {
+        public createStudent setResearchAssistant(boolean researchAssistant) {
             this.researchAssistant = researchAssistant;
             return this;
         }
 
-        public Builder setStipend(double stipend) {
+        public createStudent setStipend(double stipend) {
             this.stipend = stipend;
             return this;
         }

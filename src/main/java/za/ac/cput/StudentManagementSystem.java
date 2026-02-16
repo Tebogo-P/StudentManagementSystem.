@@ -12,7 +12,7 @@ public class StudentManagementSystem {
                 .setScholarshipAmount(50000.00)
                 .create();
 
-        GraduateStudent grad = new GraduateStudent.Builder()
+        GraduateStudent grad = new GraduateStudent.createStudent()
                 .setStudentId("230990423")
                 .setName("Amelia Hart")
                 .setEmail("230990423@mycput.ac.za")
