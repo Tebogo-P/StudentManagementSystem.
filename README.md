@@ -1,9 +1,7 @@
-Here is the plain text version. I have removed all bold text and special formatting so you can just copy and paste it.
-
 ADP372S Mini Assignment 1
 
 Student Name: Tebogo Pii
-Student Number: 240674774
+Student Number: 230226442
 
 Project Overview
 This is my submission for the mini assignment. I built a Student Management System in Java that handles different student types marked Undergraduate and Graduate. I used the Builder Pattern to handle the optional fields and Inheritance to share common attributes.
@@ -23,4 +21,4 @@ Open/Closed Principle (OCP)
 I used this so I can add new features without breaking old code. I created an abstract Student class. If we need a Honors Student later perhaps, I can just extend Student in a new file. I don't need to change the existing Student or Undergraduate code to make it work.
 
 GitHub Repository
-[Paste your link here]
+(https://github.com/Tebogo-P/StudentManagementSystem..git)
