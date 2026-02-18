@@ -70,7 +70,7 @@ public class UndergraduateStudent extends Student {
             return this;
         }
 
-        public UndergraduateStudent create() {
+        public UndergraduateStudent build() {
             return new UndergraduateStudent(this);
         }
     }

@@ -10,7 +10,7 @@ public class StudentManagementSystem {
                 .setDepartment("Information Technology")
                 .setCreditHours(30)
                 .setScholarshipAmount(50000.00)
-                .create();
+                .build();
 
         GraduateStudent grad = new GraduateStudent.createStudent()
                 .setStudentId("230990423")
